@@ -12,6 +12,8 @@
 4. Analisis Exploratorio de los Datos
 5. Dashboard (Resultado)
 6. Herramienta utilizada
+7. Enlace
+8. Diagrama de proceso
 
 
 ### 1. INTRODUCCION
@@ -94,3 +96,6 @@ POWER BI : es un servicio de análisis de datos de Microsoft orientado a pro
 
 haga click en la imagen despues del logo de pdf: <img src="/src/pdf1.png"  height="50"> <img src="/DataAnalytics_Proyecto03.pdf"  height="200">
 
+### 8. DIAGRAMA DE PROCESO
+
+<img src="/src/proyecto03.jpg"  height="200">
