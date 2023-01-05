@@ -92,5 +92,5 @@ POWER BI : es un servicio de análisis de datos de Microsoft orientado a pro
 
 ### 7. ENLACE
 
-Enlace : <img src="/DataAnalytics_Proyecto03.pdf"  height="200">
+Enlace haga click en imagen: <img src="/src/pdf1.png"  height="200"> <img src="/DataAnalytics_Proyecto03.pdf"  height="200">
 
