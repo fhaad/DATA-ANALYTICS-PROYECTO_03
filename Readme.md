@@ -98,4 +98,4 @@ haga click en la imagen despues del logo de pdf: <img src="/src/pdf1.png"  heigh
 
 ### 8. DIAGRAMA DE PROCESO
 
-<img src="/src/proyecto03.jpg"  height="200">
+<img src="/src/proyecto03.jpg"  height="500">
