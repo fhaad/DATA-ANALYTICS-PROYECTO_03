@@ -7,159 +7,87 @@
 ### TABLA GENERAL
 
 1. Introduccion
-2. Procedimientos
-3. Limpieza ETL (Extract, Transform, Load)
-4. Resultado
-5. Herramientas utilizadas
-6. FastApi (ejecucion)
-7. Docker (container)
-8. Deploy (Mogenius)
-9. Video Tutorial del Proyecto
+2. Contexto
+3. Proceso
+4. Analisis Exploratorio de los Datos
+5. Dashboard (Resultado)
+6. Herramienta utilizada
 
 
 ### 1. INTRODUCCION
 
 En DATA SCIENCE, el componente de Data Analytics la informacion extraida conforma un conjunto de datos en bruto que a traves de la transformacion y la aplicacion de procedimientos, metricas, indicadores, planeacion de objetivos claros y de preguntas se toman decisiones con el fin de mejorar la productividad en cualquier area. Hoy en dia Business Inteligence es la expresion que involucra una etapa importante de visualizacion de los datos que deseamos obervar e interpretar los resultados.
 
+<img src="/src/data.jpg"  height="400">
 
-### 2. PROCEDIMIENTOS
+### 2. CONTEXTO
 
-Despues de conocer la fuente de los datos y extraerlos se realiza un EDA (Exploratory Data Analysis) o Analisis exploratorio de los datos e identificar las variables y su contenido.
-Podemos realizar los siguientes pasos
-
-- Analisis exploratorio
-- Documentacion de lo encontrado
-- Documentacion de las soluciones
-- Impacto del ETL y las necesidades
-- Organizacion de la Data 
-
-Dentro del desarrollo de DATA ENGINNER los pasos del analisis son fundamentales y el pre ambulo del trabajo que se debe realizar con la informacion para obtener un buen resultado.
+En la practica de DATA ANALYTICS la extracción y análisis de los datos, así como el contexto o enfoque de la información nos muestra el significado de lo que podemos realizar con ello. A primera vista solo son datos que pueden o no tener un sentido, pero en la medida en que profundicemos y nos preguntamos hasta donde queremos llegar?, que deseo mostrar?, quien es mi audiencia?, cuales son los datos relevantes?, cual es la necesidad de análisis?, es ahí, en donde los datos cobran vida..
 
 
-<img src="/src/ETL.jpg"  height="400">
+<img src="/src/contexto.jpg"  height="400">
 
-### 3. LIMPIEZA ETL
+### 3. PROCESO
 
-El proceso de ETL comienza con la extraccion de los datos de forma cruda. Estos archivos originales de los datos se guardaron en un directorio.
-
-DIRECTORIO  ..\DATASET_RAW (Archivos originales)
-
-Se procedió a cargar la data en un DataFrame de pandas para su mejor manipulacion.
-Los archivos cargados son de tipo .CSV y .JSON, para un total de 4 archivos con diferente cantidad de columnas y filas.
-
-A continuacion se procede a realizar un EDA con los datos:
-
-Para este procedimiento se utilizo una libreria practica y agil conocida como **pandas-profiling**, que genera un reporte detallado y completo de los datos crudos.
-
-- from pandas_profiling import ProfileReport (Libreria de Reporte): genera un reporte con una interface en HTML.
-- Se procedio a guardar estos reportes en un directorio como documentacion encontrada 
-DIRECTORIO  ..\EDA_REPORT (Reportes)
-
-- dataset_amazon.html
-- dataset_disney.html
-- dataset_hulu.html
-- dataset_netflix.html
-
-<img src="/src/profiling.jpg"  height="400">
-
-Despues del anterior analisis se procede a aplicar una serie de codigos de limpieza de datos. 
-Para cada archivo de DATA se creo un **Jupyter Notebook** con los siguientes nombres
-
-- Carga_dataset_amazon_ETL
-- Carga_dataset_disney_ETL
-- Carga_dataset_hulu_ETL
-- Carga_dataset_netflix_ETL
-
-estos archivos quedaron en el directorio raiz.
-
-Pasos que se aplicaron de limpieza
-
-- Eliminacion de columnas (no necesarias)
-- Completar datos faltantes (valores que no afectan el resultado)
-- Agregacion de nuevas columnas
-- Separacion de datos string y numericos
-- Cambio de datos string a numerico
-- Verificación de numero de columnas (concatenancion)  
-
-### 4. RESULTADO
-
-Despues de haber aplicado el ETL a cada uno de los archivos de datos se procedio a guardar el resultado de limpieza en achivos tipo .CSV con un nuevo nombre y en un directorio con los siguietes nombres:
-
-DIRECTORIO  ..\DATASET_CLEAN
-
-- dataset_amazon_clean
-- dataset_disney_clean
-- dataset_hulu_clean
-- dataset_netflix_clean
-
-por ultimo se hizo un concatenacion (union) de los archivos limpios en un solo dataset con el siguiente nombre:
-
-- dataset_new
-
-Este archivo dataset_new se pasa a una base de datos **sqlite** para ser utilizado en FastApi. Directorio guardado.
-
-DIRECTORIO  ..\BaseDatos
-
-- dataset_new.db 
-
-<img src="/src/MySQL.jpg"  height="200">
-
-### 5. HERRAMIENTAS UTILIZADAS
-
-estas son las diferentes herramientas y librerias utilizadas
-
-- Visual Studio Code
-- Lenguaje de Programacion Python
-- Libreria Pandas
-- Libreria Pandas-Profiling
-- Libreria Sqlalchemy
-- Libreria Sqllite
-
-<img src="/src/python.jpg"  height="200">  <img src="/src/alchemy.jpg"  height="200">
-
-### 6. FASTAPI
-
-Es un framework para crear APIs tales como REST APIs o APIs RPC con un rendimiento excelente, para soportar sitios web de alta concurrencia.
-FastAPI es totalmente compatible con el tipado y el asincrónismo de las últimas versiones de Python por lo que se hace necesario para este proyecto que nos recrea un entorno laboral en demanda.
-
-estos son los pasos que se realizaron:
-
-- Se instala ambiente virtual (venv)
-- Se instala Libreria Pandas
-- Se instala Libreria FastApi
-- Se instala Libreria Sqlalchemy
-- Se instala Uvicorn
-
-Luego se crea un archivo .PY que contendra la conexion a la base de datos
-
-<img src="/src/fastapi.jpg"  height="200">
-
-### 7. DOCKER
-
-Docker es una plataforma diseñada para ayudar a los desarrolladores a crear, compartir y ejecutar aplicaciones. 
-
-Utiliza contenedores, y lo que hacen es reutilizar el kernel, que es la parte mas profunda del SO de la maquina anfitriona, manejando de forma más óptima recursos que ya están disponibles. Esa containerización, trae consigo las ventajas de ser más liviana, portable, de bajo acoplamiento debido a que los contenedores son autocontenidos (no afecta a los demás para su funcionamiento), escalable y segura.
+“Cuando tu practica se convierte en una realidad”.
+Los datos de Enacom Telecomunicaciones de Argentina en sus datos abiertos como ejemplo se utilizaran para realizar una lectura de lo que se pueden hacer con ellos. 
+Es así, como se comienza con un análisis exploratorio de los datos y la utilización de lo mas relevante y que historia podremos contar? 
 
 
-<img src="/src/docker.jpg"  height="200">
+<img src="/src/proceso.jpg"  height="400">
 
-### 8. DEPLOY - MOGENIUS
+  
 
-ENLACE: https://fastapi-proyec-prod-proyecto-01-fede-a0vzhm.mo5.mogenius.io/docs
+### 4. ANALISIS EXPLORATORIO DE LOS DATOS
 
-Mogenius es una plataforma en la nube donde puedes alojar tus aplicaciones.  Es aqui donde se hara la ejecucion de nuestra aplicacion enlazada directamente al repositorio de github donde se encuentra todo el desarrollo.
+1. En el análisis preliminar de los dataset de ENACOM es entender el contexto de los datos.
+2. Identificar cuales son los datos relevantes con el cual queremos trabajar.
+3. Definir objetivos claros de lo que deseamos mostrar en el dashboard.
+4. Pensar en lo que la audiencia quiere ver.
+5. Organizar, revisar los datos y el estado en el que se encuentran.
+6. Crear un mockup o borrador de dashboard para tener una idea clara de los objetivos propuestos.
+
+** Caracteristicas del Analisis**
+
+- Enacom telecomunicaciones tiene diferentes áreas de servicio, tales como: Acceso a internet, telefonía móvil, telefonía fija, TV paga o por suscripción, etc.
+- El dashboard se enfocara en las áreas nombradas anteriormente.
+- Se realizara un enfoque desde lo general hasta lo mas especifico.
+- Se observaran datos generales de cada área como conjunto.
+- Luego cada área se desglosa en datos específicos de relevancia.
+- Donde se concluirá con datos de interés.
+
+En este Analisis se tomaron 4 diferentes tipos de areas para trabajar con los datos y mostrar un resultado del contenido encontrado.
+
+- Area de acceso a Internet
+- Area de Telefonía Móvil
+- Area de Telefonía Fija
+- Area de TV por Suscripción y satelital
 
 
-<img src="/src/mogenius.jpg"  height="200">
+<img src="/src/eda1.jpg"  height="200">
+
+### 5. DASHBOARD
+
+La realizacion del Dashboard esta organizado desde lo mas general hasta lo mas especifico.
+
+Se tomaron 4 sectores importantes de las telecomunicaciones
 
 
-### 9. VIDEO TUTORIAL
+- Area de acceso a Internet
+- Area de Telefonía Móvil
+- Area de Telefonía Fija
+- Area de TV por Suscripción y satelital
 
-Aqui podra observar un video tutorial de este proyecto.
-
-Enlace: https://youtu.be/X_HzXqmFXgM
 
 
-### DIAGRAMA DE PROCESO
+<img src="/src/dashboard1.jpg"  height="200">  <img src="/src/dashboard2.jpg"  height="200"> <img src="/src/dashboard3.jpg"  height="200">
 
-<img src="/src/Proyecto_01_FastApi_Fede.jpg"  height="600">
+### 6. HERRAMIENTA UTILIZADA
+
+POWER BI : es un servicio de análisis de datos de Microsoft orientado a proporcionar visualizaciones interactivas y capacidades de inteligencia empresarial (en inglés: business intelligence o BI) con una interfaz lo suficientemente simple como para que los usuarios finales puedan crear por sí mismos sus propios informes y paneles
+
+
+<img src="/src/powerbi.png"  height="200">
+
+
+
