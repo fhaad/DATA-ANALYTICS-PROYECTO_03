@@ -1,6 +1,6 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
-### PROYECTO INDIVIDUAL 01 - DATA ENGINEER
+### PROYECTO INDIVIDUAL 03 - DATA ANALYTICS
 
 ### JOSE FEDERICO HAAD ATUESTA - DTS-05
 
@@ -19,7 +19,8 @@
 
 ### 1. INTRODUCCION
 
-En el mundo de DATA la informacion puede llegar de diferentes fuentes y en diferentes estados. Dentro de estas fuentes estan las aplicaciones moviles o web, la red de internet, el internet de las cosas, imagenes y videos. Si magnificamos las fuentes de informacion como se menciona, se podran imaginar la cantidad de pentabytes de informacion lista para ser analizada. Pero antes de esto imaginemos que la DATA no llega estruturada u organizada, son datos crudos que a simple vista no dicen nada. Y he aqui la importancia de los DATA ENGINEER, quienes son los que realizan un procedimiento llamado ETL; en el que consiste en limpiar y organizar los datos de tal manera que puedan ser manipulados y almacenados en un warehouse(bodega de datos) para su futuro procesamiento.
+En DATA SCIENCE, el componente de Data Analytics la informacion extraida conforma un conjunto de datos en bruto que a traves de la transformacion y la aplicacion de procedimientos, metricas, indicadores, planeacion de objetivos claros y de preguntas se toman decisiones con el fin de mejorar la productividad en cualquier area. Hoy en dia Business Inteligence es la expresion que involucra una etapa importante de visualizacion de los datos que deseamos obervar e interpretar los resultados.
+
 
 ### 2. PROCEDIMIENTOS
 
